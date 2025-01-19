@@ -1,44 +1,37 @@
 const mongoose = require("mongoose");
-const slugify = require("slugify")
 
 const BlogSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    unique: false,
+  // _id: {
+  //   type: String,
+  //   unique: false,
 
-      },
+  //     },
         
-  title: {
+  text: {
     type: String,
-    required: true,
+    required: false,
     // sparse: true,
     // unique: true,
     
  
     
   },
-  slug: {
-      type: String,
-      // required: [false, "Please provide a title"],
-      // unique: true,
-      // minlength: [4, "Please provide a title least 4 characters "],
-  },
 
 
-  content: {
+  key: {
     type: String,
     unique: false,
   },
-  author: {
+  type: {
     type: String,
     unique: false,
   },
-  date: {
-    type: Date,
-sparse: true,
+  depth: {
+    type: Number,
+sparse: false,
   
   }
 });
 
-const BlogModel = mongoose.model("post", BlogSchema);
+const BlogModel = mongoose.model("Draft", BlogSchema);
 module.exports = BlogModel;

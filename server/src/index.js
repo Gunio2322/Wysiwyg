@@ -6,7 +6,7 @@ require('./db/mongoose.js')
 const slugify = require("slugify")
 const _ = require('lodash');
 var kebabCase = require('lodash.kebabcase');
-const UserModel = require("./db/models/Users");
+// const UserModel = require("./db/models/Users");
 const BlogModel = require('./db/models/Blog')
 const cors = require("cors");
 const path = require("path")
