@@ -24,6 +24,11 @@ const post = require('../controllers/Blog/posts');
 
 router.post('/api/newPost', post.newPost);
 router.get('/api/getPosts', post.getPosts );
+router.put('/api/putPost/:_id', post.putPost );
+router.delete('/api/deletePost/:_id', post.deletePost );
+router.get('/api/postFilter/:_id', post.postFilter);
+
+
 
 
 
