@@ -22,8 +22,9 @@ const post = require('../controllers/Blog/posts');
 
 
 
-// router.post('/api/createFetch', post.createFetch);
 router.post('/api/newPost', post.newPost);
+router.get('/api/getPosts', post.getPosts );
+
 
 
 module.exports = router;

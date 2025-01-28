@@ -17,15 +17,7 @@ exports.getPosts = async (req, res, next) => {
 res.status(200)
 };
 
-exports.createPost = async (req, res, next) => {
-    const post = req.body;
-    // console.dir(post);
-    const newPost = new BlogModel(post);
-    await newPost.save();
 
-    res.json(post);
-
-};
 
 exports.postFilter = async (req, res, next) => {
 
@@ -36,17 +28,6 @@ exports.postFilter = async (req, res, next) => {
 };
 
 
-
-exports.createFetch = async (req, res, next) => {
-    const post = req.body;
-    // console.dir(post);
-    const newPost = new BlogModel(post);
-    await newPost.save();
-
-    res.json(post);
-    res.json({ message: "Post added successfully!✅" });
-
-};
 exports.newPost = async (req, res, next) => {
     const post = req.body;
     
